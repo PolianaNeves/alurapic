@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { SignUpService } from './signup/signup.service';
+import { HomeComponent } from './home.component';
+import { HomeRoutingModule } from './home.routing.module';
 import { SignInComponent } from './signin/signin.component';
 import { SignUpComponent } from './signup/signup.component';
 import { VMessageModule } from './../shared/components/vmessage/vmessage.module';
@@ -10,7 +13,8 @@ import { VMessageModule } from './../shared/components/vmessage/vmessage.module'
 @NgModule({
     declarations: [
         SignInComponent,
-        SignUpComponent
+        SignUpComponent,
+        HomeComponent
     ],
     imports: 
     [
@@ -18,7 +22,12 @@ import { VMessageModule } from './../shared/components/vmessage/vmessage.module'
         ReactiveFormsModule, 
         FormsModule,
         VMessageModule, 
-        RouterModule
+        RouterModule,
+        HomeRoutingModule
+    ],
+    providers: 
+    [
+        SignUpService
     ]
 })
 export class HomeModule { }
