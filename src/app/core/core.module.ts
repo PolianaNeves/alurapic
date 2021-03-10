@@ -1,9 +1,11 @@
-import { LoadingModule } from './../shared/components/loading/loading.module';
+import { ShowIfLoggedModule } from './../shared/directives/show-if-logged/show-if-logged.module';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { AlertModule } from './../shared/components/alert/alert.module';
+import { MenuModule } from './../shared/components/menu/menu.module';
+import { LoadingModule } from './../shared/components/loading/loading.module';
 import { RequestInterceptor } from './auth/request.interceptor';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
@@ -25,7 +27,9 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
         CommonModule,
         RouterModule,
         AlertModule,
-        LoadingModule
+        LoadingModule,
+        MenuModule,
+        ShowIfLoggedModule
     ],
     providers: [
         {
